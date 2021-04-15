@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Aninventory example</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/script.js"> </script>
+</head>
+
+<body>
+    <header>
+        <h2>Inventory Management</h2>
+    </header>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Slno</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Rate</th>
+                    <th>Stock Value</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="text" id="tbPnm" /></td>
+                    <td><input type="number" id="tbQty" /></td>
+                    <td><input type="decimal" id="tbRate" /></td>
+                    <td></td>
+                    <td><button type="button" id="addBtn">ADD</button></td>
+                </tr>
+            </thead>
+            <tbody id="prdsArea">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" style="text-align:center">
+                        <span id="countSpan">0</span> item(s) added
+                    </td>
+                    <td id="totalAmt">0</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</body>
+
+</html>

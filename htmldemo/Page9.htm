@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Form Tags or Input Elements</title>
+  </head>
+  <body>
+     <form action="PageOrServerProgramToWhomToSubmit" method="GET">
+	<p><label for="txtBox1">TextBox: </label>
+		<input type="text" name="txtBox1" id="txtBox1" required/></p>
+	<p><label>TextBox4Number: </label>
+		<input type="number" name="txtBox2" /></p>
+	<p><label>TextBox4Date: </label>
+		<input type="date" name="txtBox3" /></p>
+	<p><label>TextBox4Time: </label>
+		<input type="time" name="txtBox4" /></p>
+	<p><label>TextBox4Pwd:</label> 
+		<input type="password" name="txtBox5" /></p>
+		<p><label>Range:</label> 
+		<input type="range" name="range" /></p>
+	<br />
+	<p><label>CheckBox:</label> 
+		<input type="checkBox" name="chk1" />I am Married</p>
+	<p><label>RadioButtons: </label>
+		<input type="radio" name="gender"/>Boy
+		<input type="radio" name="gender"/>Girl</p>
+	<br />
+	<p><label>SelectBox: </label>	
+			<select>
+				<option>---Select----</option>
+				<option value="ug">Under Graduate</option>
+				<option value="gd">Graduate</option>
+				<option value="pg">Post Graduate</option>
+			</select> </p>
+	<p><label>MultiSelectBox:</label>
+			<select multiple>
+				<option>Cricket</option>
+				<option>Hockey</option>
+				<option>BaseBall</option>
+				<option>FootBall</option>
+			</select> </p>
+	<p><label>Multi Line textBox:</label> 
+		<textarea rows="5" cols="50"></textarea> </p>
+	<p><button type="reset">Clear All</button>
+	   <button type="submit">Send Data</button>
+	   <button type="button" onclick="alert('Hai!')">Click Me</button>
+	</p>
+   </form>
+  </body>
+</html>

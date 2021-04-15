@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script>
+			$(document).ready(function(){	
+				$('#textbox1').keypress(function(event){
+					$(this).val('a key is pressed ' + event.which);
+				});
+				
+				$('#textbox1').keydown(function(event){
+					$(this).val('you are holding a key' + event.which);
+				});
+				
+				$('#textbox1').keyup(function(event){
+					$(this).val('you released a key'+ event.which);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2>Keyboard Events Demo</h2>
+		<input type="text" size="30" id="textbox1" readonly/>
+		
+	</body>		
+</html>

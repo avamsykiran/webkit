@@ -1,0 +1,23 @@
+body{
+    background-color: #a0b0c0;
+    padding:10px;
+}
+
+h2{
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+table {
+    border:1px solid black;
+    width:50%;
+    margin:auto;
+}
+
+td,th{
+    border-bottom: 0.5px solid black;
+}
+
+tr:last-child td,tr:last-child th{
+    border:0px;
+}

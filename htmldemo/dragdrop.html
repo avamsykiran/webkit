@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drag Drop Demo</title>
+</head>
+<body>
+<div style="float:left;width:300px">
+<h3>Available Courses </h3>
+<img title="HTML5" src="html5.jpg" width="75" height="75"  draggable="true"  
+ondragstart="startDrag(event)" />
+<p/>
+<img title="CSS3" src="css3.jpg" width="75" height="75" draggable="true"  
+ondragstart="startDrag(event)" />
+<p/>
+<img title="JQuery" src="jquery.jpg" width="75" height="75" draggable="true"  ondragstart="startDrag(event)" />
+</div>
+
+<div style="float:left">
+ <h3>Selected Courses </h3>
+ <select id="courses" size="5" style="width:300px;height:200px" 
+	ondrop="drop(event)" ondragover="allowDrop(event)">  
+ </select>
+ 
+ <p/>
+ <button onclick="clearItems()">Clear All</button>
+</div>
+
+<script>
+
+function clearItems(obj)
+{
+    var list = document.getElementById("courses");
+    for (i = list.options.length - 1; i >= 0 ; i -- ) 
+          list.options.remove(i);
+}
+
+function startDrag(e) {
+    e.dataTransfer.dropEffect = "link";
+	//e.dataTransfer.dropEffect = "move";
+	//e.dataTransfer.dropEffect = "copy";
+    e.dataTransfer.setData("title", e.target.title);	
+	e.dataTransfer.setData("duration", "15 days");	
+}
+
+function allowDrop(e)
+{
+   e.preventDefault();
+}
+
+function drop(e)
+{
+  e.preventDefault();
+  var title = e.dataTransfer.getData("title");
+  var cDur = e.dataTransfer.getData("duration");
+  
+  var display = title + " " + cDur;
+  
+  // add course if not already added 
+  var list = e.target;
+  for (i = 0; i < list.options.length; i++) {
+      if (list.item(i).text == display) {
+          alert("You have already added this course!");
+          return;
+      }
+ }
+
+ var opt = new Option(display);
+
+ list.options.add(opt);
+}
+
+</script>
+
+</body>
+</html>

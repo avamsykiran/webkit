@@ -1,0 +1,38 @@
+<!Doctype html>
+
+<html>
+<head>
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="localstorage.css" />
+    <script src="localstoragescript.js"></script>
+</head>
+<body onLoad="loadData()">
+    <h2>Local Storage</h2>
+
+    <form>
+        <div>
+            <label>First Name</label>
+            <input type="text" name="fnm" id="fnm" />
+        </div>
+        <div>
+            <label>last Name</label>
+            <input type="text" name="lnm" id="lnm" />
+        </div>
+        <div>
+            <label>Contact Number:</label>
+            <input type="text" name="cno" id="cno" />
+        </div>
+        <button type="button" onClick="addContact()">Add Contact</button>
+        <button type="button" onClick="clearAll()">Deete All Contacts</button>
+    </form>
+    
+    <table id="contactsDisplay">
+        <thead><tr><th>First name</th><th>Last Name</th><th>Contact Number</th></tr></thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>
+
+

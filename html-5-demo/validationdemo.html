@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <form action="login.aspx" method="post">
+        <h3>Login</h3>
+        Email : <input type="email" required="required" name="email" title="Email Address" />
+        Password : <input type="password" required="required" name="password"
+               title="Password must contain at least 6 chars consisting of letters and digits "  pattern="[0-9A-Za-z_]{6,}" />
+        <p />
+        <input type="submit" value="Login" />
+        <input type="submit" value="Cancel"  formaction="cancel.aspx" formnovalidate="formnovalidate" />
+    </form>
+</body>
+</html>

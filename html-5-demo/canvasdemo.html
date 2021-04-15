@@ -1,0 +1,49 @@
+<!Doctype html>
+
+<html>
+<head>
+  <title>Canvas Demo</title>
+</head>
+<body>
+  <h2>Canvas Demo</h2>
+  <canvas id="can1" width="400" height="400" style="border:1px solid">
+  </canvas>
+  <p/>
+  <button onclick="drawRect()">Draw Rectangle</button>
+  <p/>
+  <button onclick="drawCircle()">Draw Circle</button>
+  <p />
+  <button onclick="drawText()">Draw Text</button>
+     
+  <script>
+      function drawRect() {
+	     var can = document.getElementById("can1");
+		 var ctx = can.getContext("2d");
+		 ctx.fillStyle="green";
+		 ctx.fillRect(10,10,100,100);
+	  }
+	  
+	  function drawCircle() {
+	     var can = document.getElementById("can1");
+		 var ctx = can.getContext("2d");
+		 ctx.beginPath();
+                 //ctx.arc(200,200,45,Math.PI,2*Math.PI);
+				 ctx.arc(200,200,45,0,2*Math.PI);
+                 ctx.fillStyle="red";
+                 ctx.fill();
+	  }
+
+	  function drawText() {
+	      var can = document.getElementById("can1");
+	      var ctx = can.getContext("2d");
+	      ctx.font = "30px Arial";
+	      ctx.fillStyle = "navy";
+          	      ctx.strokeStyle="navy"
+	      ctx.fillText("Impulse Software",50, 300);
+	      //ctx.strokeText("Impulse Software", 50, 300);
+	  }
+  </script>
+</body>
+</html>
+
+

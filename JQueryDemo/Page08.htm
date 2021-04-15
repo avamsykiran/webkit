@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script>
+			$(document).ready(function(){			
+				$('#para1').on({
+					mouseenter: function(){
+						$(this).css('border','2px solid black');
+					},
+					mouseleave: function(){
+						$(this).css('border','0px');
+					},
+					click: function(){
+						alert($(this).text());
+					}
+				});
+				$("#btn1").click(function(){
+					$("#para1").off("click");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2>The 'on' function Demo</h2>
+		<p id="para1">Some text,Some Text</p>
+		<button id="btn1" type="button">Remove Click</button>
+	</body>		
+</html>

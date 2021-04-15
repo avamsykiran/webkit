@@ -1,0 +1,55 @@
+s1		applies to elements that have s1 as tag name
+.s1		applies to elements that have s1 as class
+#s1		applies to elements that have s1 as id
+
+s1,s2	applies to elements that match both selectors
+s1 s2	applies to all elements that match s2 and are inside s1
+s1>s2	applies to all elements that match s2 whose parent is s1
+s1+s2	applies to all elements that match s2 and are immediately after s1
+s1~s2	applies to every element that match s2 and is preceded by s1
+
+				applies to all elements that have
+				------------------------------------
+[s1]			 s1 as attribute
+[s1='v1']		 s1 attrib with v1 value
+[s1~='v1']		 s1 attrib value containes word v1
+[s1*='v1']		 s1 attrib value containes word v1
+[s1!='v1']		 s1 attrib value not equal to v1
+[s1^='v1']		 s1 attrib value starts with the word v1
+[s1$='v1']		 s1 attrib value ends with the word v1
+
+Psuedo selectors
+----------------------------------------------------------------------------
+input:enabled	Selects every enabled <input> element
+p:first-child	Selects every <p> element that is the first child 
+				of its parent
+p::first-letter	Selects the first letter of every <p> element
+p::first-line	Selects the first line of every <p> element
+p:first-of-type	Selects every <p> element that is the first <p> 
+				element of its parent
+input:focus		Selects the input element which has focus
+a:hover			Selects links on mouse over
+input:in-range	Selects input elements with a value within a specified range
+
+input:indeterminate		
+				Selects input elements that are in an indeterminate state
+
+input:invalid	Selects all input elements with an invalid value
+input:optional	Selects input elements with no "required" attribute
+
+p:last-child	Selects every <p> element that is the last child of its parent
+p:last-of-type	Selects every <p> element that is the last <p> element of its parent
+
+a:link			Selects all unvisited links
+:not(p)			Selects every element that is not a <p> element
+p:nth-child(2)	Selects every <p> element that is the second child of its parent
+p:nth-last-child(2)	
+				Selects every <p> element that is the second child of its parent, 
+				counting from the last child
+
+
+p:nth-last-of-type(2)	
+				Selects every <p> element that is the second <p> element of its parent, 
+				counting from the last child
+p:nth-of-type(2)	
+				Selects every <p> element that is the second <p> element of its parent

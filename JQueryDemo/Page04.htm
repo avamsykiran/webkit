@@ -1,0 +1,36 @@
+<html>
+
+<head>
+
+	<script src="jquery-3.1.0.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#para1').click(function () {
+				alert('The para is clicked');
+			});
+
+			$('#para1').dblclick(function () {
+				alert('The para is doubled clicked');
+			});
+
+			$('#para1').mouseover(function () {
+				$(this).css('background-color', '#000000');
+				$(this).css('color', '#ffffff');
+			});
+
+			$('#para1').mouseleave(function () {
+				$(this).css('background-color', '#ffffff');
+				$(this).css('color', '#000000');
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+	<h2>Mouse Events Demo</h2>
+	<p id="para1">Some para</p>
+
+</body>
+
+</html>

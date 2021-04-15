@@ -1,0 +1,14 @@
+{
+    "books":[
+        {
+            "bookId":101,
+            "title":"The wings of fire",
+            "cost":2054
+        },
+        {
+            "bookId":102,
+            "title":"A post left long..",
+            "cost":1054
+        }
+    ]
+}

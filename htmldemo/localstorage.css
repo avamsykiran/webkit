@@ -1,0 +1,21 @@
+
+form{
+    background-color: #0000ff;
+    border-radius: 20px;
+    padding: 20px;
+    width:50%;
+    margin: auto;
+}
+
+form>div>label,form>div>input{
+    display: inline-block;
+    width:40%;
+}
+
+table{
+    width:75%;
+    margin: auto;
+    margin-top: 15px;
+    border:1px solid black;
+    border-radius: 10px;
+}

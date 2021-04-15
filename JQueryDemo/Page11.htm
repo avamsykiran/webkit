@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script>
+			$(function(){			
+				$('#slideDownBtn').click(function(){
+					$('#logo').slideDown();
+				});
+				$('#slideUpBtn').click(function(){
+					$('#logo').slideUp();
+				});
+				$('#slideToggleBtn').click(function(){
+					$('#logo').slideToggle();
+				});
+				
+				$('#slideDownBtn2').click(function(){
+					$('#logo').slideDown($('#timeTxt').val());
+				});
+				$('#slideUpBtn2').click(function(){
+					$('#logo').slideUp($('#timeTxt').val());
+				});
+				$('#slideToggleBtn2').click(function(){
+					$('#logo').slideToggle($('#timeTxt').val());
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<h2>The Sliding Effects Demo</h2>
+		<hr />
+		<button id="slideDownBtn">Slide Down</button>
+		<button id="slideUpBtn">Slide Up</button>
+		<button id="slideToggleBtn">Slide Toggle</button>
+		<hr />
+		<label>Enter time(slow/fast/in mills):</label>
+		<input type="text" id="timeTxt" value="slow" />
+		<button id="slideDownBtn2">Slide Down</button>
+		<button id="slideUpBtn2">Slide Up</button>
+		<button id="slideToggleBtn2">Slide Toggle</button>
+		<hr />
+		<div style="padding:20px; border: 2px dashed black;">
+		<img id="logo" src="logo.png" style="width: 200px"  />
+		</div>
+	</body>		
+</html>

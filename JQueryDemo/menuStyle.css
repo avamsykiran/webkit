@@ -1,0 +1,37 @@
+
+ nav.menuBar{
+	 margin:10px;
+	 padding:2px;
+	 margin-bottom:0px;
+	 background-color: #ccbbcc;
+ }
+ /* menus */
+ nav.menuBar>ol>li{
+	 text-decoration:none;
+	 display:inline-block;
+	 margin:2px;
+	 padding:10px;
+	 background-color: #aabbaa;
+	 font-weight:bolder;
+ }
+ 
+ nav.menuBar>ol>li>ol{
+	 position: absolute;	 
+	 background-color: #aaaaaa;
+	 padding:10px;
+	 text-decoration:none;
+ }
+ 
+ nav.menuBar>ol>li>ol>li,nav.menuBar>ol>li>ol>li>a{
+	 text-decoration:none;
+	 display:block;
+	 color:#ffffff;	 
+ }
+ 
+ nav.menuBar>ol>li>ol>li{
+	 border-bottom:1px solid #ffffff;
+	 padding:10px;
+	 
+ }
+ 
+ 

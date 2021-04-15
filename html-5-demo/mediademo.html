@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var status = document.getElementById("status");
+        var song = document.getElementById("mysong");
+
+        function playsong() {
+            var song = document.getElementById("mysong");
+            var status = document.getElementById("status");
+            status.innerHTML = "Playing....";
+            song.play();
+        }
+
+        function onPause() {
+            var status = document.getElementById("status");
+            status.innerHTML = "Paused";
+            ;
+        }
+
+        function onProgress() {
+            status.innerHTML = "Progressing...";
+         }
+
+    </script>
+</head>
+<body>
+
+     <audio id="mysong" controls="controls" onpause="onPause()"  onprogress="onProgress()">
+        <source src="SleepAway.mp3" />
+        You need a browser that supports HTML5!
+    </audio>
+
+    <p />
+    <span id="status"></span>
+    <p />
+    <button  type="button" value="Play" onclick="playsong()">Play Song</button>
+</body>
+</html>

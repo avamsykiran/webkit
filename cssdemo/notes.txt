@@ -1,0 +1,161 @@
+CSS 3 - Intro
+-----------------------------------
+
+	Cascading Style Sheet
+
+	purpose is to provide styling to an html document.
+
+	+ CSS offers common uniform properties unlike html
+	+ CSS can provide styling across grouped elements.
+	+ CSS can isolate styling from content. It adds to maintainability.
+	
+	Inline Style Sheet
+
+		it is applied using 'style' attribute.
+
+		<tagName style="css-property:value;css-property:value;">
+			content
+		</tagName>
+
+	Embeded Style Sheet
+
+		it is applied using a tag called <style></style>, style elements
+		 is a sub-element of <head></head>
+
+		<head>
+			<style>
+				selector {
+					css-property:value;
+					css-property:value;
+				}
+			</style>
+		</head>
+
+		selector is a string that qualfies the elements to be applied with the style.
+
+		1. Tag Name
+				each tag name itself is a selector.
+				
+				tagName{
+					css-property:value;
+				}
+
+		2. Attribute
+				attribute selector groups elements having the mentioned attribute.
+				
+				[attributeName]{
+					css-property:value;
+				}
+				
+				[attributeName=""]{
+					css-property:value;
+				}
+
+		3. Class
+
+				is any usr defiend string. that should start with dot(.)
+				to apply the class on a element the element class attribute 
+				should be assigned with the class name.
+
+				.className{
+					css-property:value;
+				}
+
+				<tagName class="className">
+				</tagName>
+		4. Id
+				if a style swhould be applied to an elemnt hving 
+				a specific id, then id selector is sued.
+
+				#id{
+					css-property:value;
+				}
+
+		5. Psuedo
+
+
+	External Style Sheet
+
+		style is defiend in a seperate file with extension .css
+		and that cna be linked to any number of html pages using
+		 	
+			 <link href="fileName.css" rel="stylesheet" />
+
+
+CSS - unit of measure
+------------------------------------
+
+	absolute
+		in
+		mm
+		cm
+		pt		1 in = 72 pt
+		pc		1 in = 6  pc   1 pc = 12 pt
+	
+	relative
+	
+		px
+		
+		%
+		
+		em			relative the font-size
+					1 em = complete font-size
+										
+					font-size: 12pt;
+					width: 8em;	8*12pt = 96pt;
+					
+		vh			1% of viewport height
+		vw			1% of viewport width
+		vmin		min of vh or vw
+										
+CSS font related properties
+-----------------------------------
+	font-family
+	font-size
+	font-variant		normal or small-caps
+	font-weight			bold or bolder or boldest 
+						or any number like 300,400,500..etc
+	font-style			italic or oblique
+	
+CSS Text related Proeprties
+-----------------------------------
+	color
+	direction
+	letter-spacing
+	word-spacing
+	text-align
+	text-indent
+	text-decoration		none | underline | line-through | overline
+	
+table related css prperties
+------------------------------------
+	border-collapse			collapse or seperate
+	border-spacing
+	caption-stde			top left right bottom
+	
+CSS list related properties
+----------------------------------
+
+	list-style-type			disc	circle	square	none	for ul
+							decimal	decimal-leading-zero	for ol
+							lower-alpha
+							upper-alphalower-roman
+							upper-roman
+	list-style-position		outside or inside
+	list-style-image:		url('imgs/note.png')
+	marker-offset
+	
+display css proeprty
+------------------------------
+
+	display:		none		block	inline	inline-block table-cell
+	
+controlling scroll bars
+------------------------------------
+	
+	overflow
+				visible
+				scroll
+				auto
+				hidden
+			

@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<script src="scripts/jquery-3.1.0.min.js"></script>
+		<script src="scripts/invoiceScript.js"></script>
+		<link rel="stylesheet" href="styles/invoiceStyle.css" />
+	</head>
+	<body>		
+		<h2>Invoice</h2>
+		<form>
+		<table id="invTable">
+			<thead>
+				<tr><th>SlNo.</th>
+					<th>Item Name</th>
+					<th>Rate</th>
+					<th>Qty</th>
+					<th>Price</th>
+					<th>Action</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="text" id="inm" /></td>
+					<td><input type="number" id="irt" /></td>
+					<td><input type="number" id="iqt" /></td>
+					<td><input type="number" id="ipr" readonly /></td>
+					<td><button type="button" id="btnAdd">ADD</button></td>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td id="icount">0</td>
+					<td colspan="2">Item(s) are added to cart</td>
+					<td>Total Bill Amount: </td>
+					<td id="billAmt">0</td>					
+					<td></td>
+				</tr>
+			</tfoot>
+			<tbody>
+			</tbody>
+		</table>
+		</form>
+	</body>		
+</html>

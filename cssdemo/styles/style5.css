@@ -1,0 +1,46 @@
+p{
+    text-indent: 0.5cm;
+    padding:10px;
+}
+
+#p1{
+    font-family: 'Arial Narrow';
+    font-size: 20pt;
+    font-style: italic;
+    font-weight: 800;
+    font-variant: small-caps;
+}
+
+#p2{
+    text-align: justify;
+}
+
+#p3{
+    text-transform: lowercase;
+    text-decoration: line-through;
+    text-shadow: 10px 10px 3px #a02020;
+}
+
+#p4{
+    text-transform: uppercase;
+    text-decoration: overline;
+}
+
+#p5{
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+#p6{
+    background-color: #a02020;
+    color:#ffffff;
+    text-decoration: blink; 
+    letter-spacing: 4px;
+    word-spacing:6px;
+    font-size: 18pt;
+}
+
+#p6:hover{
+    background-color: #aaaaaa;
+    color:#001100;
+}

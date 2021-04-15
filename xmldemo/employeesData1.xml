@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<employees>
+ <employee empid="145678" ename="Preeti" 
+			qual="BTech" sal="32000" />			
+ <employee empid="234589" ename="Komal" 
+			qual="BTech" sal="28500" />			
+ <employee empid="325689" ename="Rahul" 
+			qual="MTech" sal="125125" />			
+</employees>

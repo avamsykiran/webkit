@@ -1,0 +1,43 @@
+*{
+ margin:5px;
+ padding:5px;
+}
+
+body{
+	background-color:#ccccff;
+}
+
+h1,h2,h3,h4,h5,h6{
+	text-align:center;
+	border-bottom:2px solid #000000;
+}
+
+#invTable{
+	margin:auto;
+	padding:0px;
+	border-radius:15px;
+	border:1px solid #000000;
+}
+
+input {
+	border:1.5px solid #000000;
+}
+
+tr{
+	margin:0px;
+	padding:0px;
+}
+
+th,td{
+	margin:0px;
+	padding:5px;
+}
+
+#invTable thead,#invTable tfoot{
+	background-color:#aaaaaa;
+}
+
+#invTable tbody{
+	background-color:#ccaacc;
+}
+

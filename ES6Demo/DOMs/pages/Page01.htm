@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>My New Page 1</title>
+    <script>
+
+        addPara = function (content) {
+            var para = document.createElement("p");
+            para.textContent = content;
+
+            var bodyElement = document.querySelector("body");
+            bodyElement.appendChild(para);
+        }
+
+        btn1Clicked = function () {
+            addPara("This is my new para dynamically generated");
+        }
+
+        btn2Clicked = function () {
+            if (confirm("Are ypu sure of adding a para!")) {
+                let text = prompt("Enter Content: ", 
+                    "Some contnet here ....")
+                addPara(text);
+                alert("Your para got added")
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <h2>A New Page</h2>
+    <button type="button" onClick="btn1Clicked()">Add Para</button>
+    <button type="button" onClick="btn2Clicked()">
+        Add Para With My Content</button>
+</body>
+
+</html>

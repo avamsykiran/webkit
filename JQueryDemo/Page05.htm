@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script>
+			$(function(){
+				$('#para1').click(function(){
+					alert('The link is clicked');
+				});
+				$('#para1').dblclick(function(){
+					alert('The link is doubled clicked');
+				});
+				
+				$('#para1').mouseenter(function(){										
+					$(this).prop('style','border: 1px solid black;');
+				});
+				
+				$('#para1').mouseleave(function(){
+					$(this).prop('style','border: 0;')
+				});
+				
+				$('#para1').mousedown(function(){										
+					$(this).prop('style','background-color:#ff00ff;');
+				});
+				
+				$('#para1').mouseup(function(){
+					$(this).prop('style','background-color:#ffffff;')
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2>Mouse Events Demo</h2>
+		<p id="para1" >Some Test para.ome Test para.ome Test para.</p>
+		
+	</body>		
+</html>

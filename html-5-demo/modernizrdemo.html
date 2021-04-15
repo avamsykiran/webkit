@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title>Modernizr Demo</title>
+<body>
+<h2>Test Brower's HTML5 Capabilities </h2>
+<button onclick="test()">Test</button>
+<p/>
+<div id="divResult">
+</div>
+
+<script type="text/javascript" src="modernizr-latest.js"></script>
+<script>
+
+function test() {
+var info="<ul>";
+if (Modernizr.audio) 
+     info += "<li>Audio</li>";
+
+if (Modernizr.video) 
+     info += "<li>Video</li>";
+	 
+if (Modernizr.canvas) 
+     info += "<li>Canvas</li>";
+
+if (Modernizr.draganddrop) 
+     info += "<li>Drag and Drop</li>";
+
+
+var result = document.getElementById("divResult");
+result.innerHTML = info;
+}
+
+</script>
+
+</body>
+</html>

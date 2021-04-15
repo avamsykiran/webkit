@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script>
+			$(function(){			
+				$('#animateBtn').click(function(){
+					if($('#logo').css('width')!='100px'){
+						$('#logo').animate({width:'100px'},
+									$('#timeTxt').val());	
+						$('#logo').animate({marginLeft:'100px'},
+									$('#timeTxt').val());						
+					}
+					else{
+						$('#logo').animate({width:'200px'},$('#timeTxt').val());	
+						$('#logo').animate({marginLeft:'0px'},$('#timeTxt').val());
+					}
+											
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<h2>The Animate Function (Effects) Demo</h2>
+		
+		<label>Enter time(slow/fast/in mills):</label>
+		<input type="text" id="timeTxt" value="slow" />
+		<button id="animateBtn">Animate</button>
+		<hr />
+		<div style="padding:20px; border: 2px dashed black;">
+		<img id="logo" src="logo.png" style="width: 200px"  />
+		</div>
+	</body>		
+</html>

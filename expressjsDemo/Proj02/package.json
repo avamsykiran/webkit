@@ -1,0 +1,14 @@
+{
+  "name": "proj01",
+  "version": "1.0.0",
+  "description": "a simple expressjs project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Vamsy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

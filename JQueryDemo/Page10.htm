@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script>
+			$(document).ready(function(){			
+				$('#fadeInBtn').click(function(){
+					$('#logo').fadeIn();
+				});
+				$('#fadeOutBtn').click(function(){
+					$('#logo').fadeOut();
+				});
+				$('#toggleFadeBtn').click(function(){
+					$('#logo').fadeToggle();
+				});
+				
+				$('#fadeInBtn2').click(function(){
+					$('#logo').fadeIn($('#timeTxt').val());
+				});
+				$('#fadeOutBtn2').click(function(){
+					$('#logo').fadeOut($('#timeTxt').val());
+				});
+				$('#toggleFadeBtn2').click(function(){
+					$('#logo').fadeToggle($('#timeTxt').val());
+				});
+			
+				$('#fadeToBtn').click(function(){
+					$('#logo').fadeTo($('#timeTxt').val(),$('#opacityTxt').val());
+				});	
+			});
+		</script>
+	</head>
+	<body>
+		<h2>The Fading Effects Demo</h2>
+		<hr />
+		<button id="fadeInBtn">Fade In</button>
+		<button id="fadeOutBtn">Fade Out</button>
+		<button id="toggleFadeBtn">Toggle Fade</button>
+		<hr />
+		<label>Enter time(slow/fast/in mills):</label>
+		<input type="text" id="timeTxt" value="slow" />
+		<button id="fadeInBtn2">Fade In</button>
+		<button id="fadeOutBtn2">Fade Out</button>
+		<button id="toggleFadeBtn2">Toggle Fade</button>	
+		
+		<label>Opacity(between 0 to 1):</label>
+		<input type="text" id="opacityTxt" value="0.5"/>
+		<button id="fadeToBtn">Fade To</button>
+		<hr />
+		<div style="padding:20px; border: 2px dashed black;">
+		<img id="logo" src="logo.png" style="width: 200px"  />
+		</div>
+	</body>		
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "JasmineDemo",
+  "version": "1.0.0",
+  "description": "a simple jasmine demo",
+  "main": "app.js",
+  "scripts": {
+    "start":"node app/app.js",
+    "test": "jasmine app-test/*.spec.js"
+  },
+  "keywords": [],
+  "author": "Vamsy",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine-node": "^3.0.0"
+  }
+}

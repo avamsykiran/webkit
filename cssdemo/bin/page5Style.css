@@ -1,0 +1,55 @@
+
+*{
+	margin:5px;
+	padding:5px;
+}
+
+#ToDos span {
+	text-decoration:underline;
+}
+
+#ToDos > p{
+	font-weight:600;
+}
+
+#ToDos + section {
+	border:5px solid black;
+	min-height:100px;
+}
+
+#ToDos ~ section {
+	background-color: #0000ff;
+}
+
+body > nav :link{
+	text-decoration:none;	
+	border-radius:10px;
+	padding:15px;
+	border: 1px solid black;
+}
+
+body > nav :hover{
+	background-color:#ff0000;
+	color:#ffffff;
+}
+
+body > nav :active{
+	background-color:#00ff00;
+	color:#cccccc;
+}
+
+:focus {
+	border: 1px dashed black;
+}
+
+li:first-child,li:last-child{
+	font-weight:700;
+}
+
+.currency:before{
+	content:'INR.';
+}
+
+.currency:after{
+	content:'/-';
+}

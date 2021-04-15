@@ -1,0 +1,47 @@
+<!Doctype html>
+
+<html>
+
+<head>
+	<title>Canvas Demo</title>
+	<script>
+		function drawRect() {
+			var can = document.querySelector("#can1");
+			var ctx = can.getContext("2d");
+			ctx.fillStyle = "green";
+			ctx.fillRect(10, 10, 100, 50);
+		}
+
+		function drawCircle() {
+			var can = document.querySelector("#can1");
+			var ctx = can.getContext("2d");
+			ctx.beginPath();
+			//ctx.arc(200,200,45,Math.PI,2*Math.PI);
+			ctx.arc(100, 100, 20, 0, 2 * Math.PI);
+			ctx.fillStyle = "red";
+			ctx.fill();
+		}
+
+		function drawText() {
+			var can = document.querySelector("#can1");
+			var ctx = can.getContext("2d");
+			ctx.font = "30px Arial";
+			ctx.fillStyle = "navy";
+			ctx.strokeStyle = "navy"
+			ctx.fillText("Hello World", 100, 100);
+		}
+	</script>
+</head>
+
+<body>
+	<h2>Canvas Demo</h2>
+	<canvas id="can1" style="border:1px solid;width:800px;height:400px;">
+	</canvas>
+	<div>
+		<button onclick="drawRect()">Draw Rectangle</button>
+		<button onclick="drawCircle()">Draw Circle</button>
+		<button onclick="drawText()">Draw Text</button>
+	</div>
+</body>
+
+</html>

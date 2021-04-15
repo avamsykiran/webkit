@@ -1,0 +1,11 @@
+{
+  "name": "proj02",
+  "version": "1.0.0",
+  "description": "a node project to demonstrate FileSystem Module",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js"
+  },
+  "author": "vamsy",
+  "license": "ISC"
+}

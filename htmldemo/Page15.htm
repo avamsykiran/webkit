@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML 5 validations</title>
+	</head>
+	<body>
+		<form autocomplete="on">
+			<div>
+				<label>Enter Your Name: </label>
+				<input type="text" id="t1" name="t1" 
+				required autocomplete="off" size="78" maxlength="30" />
+			</div>
+			<div>
+				<label>Enter Your Age: </label>
+				<input type="number" id="t2" name="t2" 
+				min="18" max="60" required  />
+			</div>
+			<div>
+				<label>Date Of Registration</label>
+				<input type="date" id="t3" name="dor"
+				min="2000-01-23" max="2020-05-29" required/>
+			</div>
+			<div>
+				<label>Enter Employee Id (Two alphas followed by 5 digits)</label>
+				<input type="text" id="t5" name="empid"
+				required pattern="[A-Za-z]{2}[0-9]{5}" />
+			</div>
+			<div>
+				<label>Enter department</label>
+				<input type="text" list="depts" required id="tdept" name="tdept"/>
+				<datalist id="depts">
+					<option value="Operations" />
+					<option value="Delivery" />
+					<option value="Production" />
+					<option value="Analysis" />
+					<option value="HR" />
+					<option value="IT" />
+				</datalist>
+			</div>
+			<div>
+				<label>Attach your Pic: </label>
+				<input type="file" id="tf" name="tf" required />
+			</div>
+			<button type="submit" formaction="Page1.htm">Submit1</button>
+			<button type="submit" formaction="Page2.htm" formnovalidate>Cancel</button>
+		</form>
+	</body>
+</html>

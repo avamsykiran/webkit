@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<employees
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="empSchema.xsd">
+	
+ <employee empid="145678">
+	<ename>Preeti</ename>
+	<qual>BTech</qual>
+	<gender>Feminine</gender>
+	<sal>
+		<basic>8500</basic>
+		<ta>1200</ta>
+		<hra>1500</hra>
+		<tax>13.0</tax>
+	</sal>	
+ </employee>
+ <employee empid="234589">
+	<ename>Komal</ename>
+	<qual>BTech</qual>
+	<gender>Masculine</gender>
+	<sal>
+		<basic>9500</basic>
+		<ta>2500</ta>
+		<hra>3500</hra>
+	</sal>	
+ </employee>
+ <employee empid="325689">
+	<ename>Rahul</ename>
+	<qual>MTech</qual>
+	<gender>Masculine</gender>
+	<sal>
+		<basic>18500</basic>
+		<ta>3000</ta>
+		<hra>8500</hra>
+	</sal>	
+ </employee>
+</employees>

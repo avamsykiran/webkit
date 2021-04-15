@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script>
+			costs = [];
+			costs["nom"]=5000;
+			costs["dux"]=9000;
+			costs["pum"]=20000;
+			
+			
+			
+			$(document).ready(function(){			
+				$('[name="catg"]').click(function(){
+					if(this.checked){
+						$("#cost").text(costs[$(this).val()]);
+						$("#tbcost").val(costs[$(this).val()]);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h4>Select a category: </h4>
+		<label>
+			<input type="radio" name="catg" id="ctg1" value="nom" /> Normal
+		</label>
+		<label>
+			<input type="radio" name="catg" id="ctg1" value="dux" /> Deluxe
+		</label>
+		<label>
+			<input type="radio" name="catg" id="ctg1" value="pum" /> Prmium
+		</label>
+		
+		<h4>That costs you <span id="cost"></span>
+			<input type="number" id="tbcost" readonly />
+		</h4>
+		
+	</body>		
+</html>

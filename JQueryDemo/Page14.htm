@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<script src="jquery-3.1.0.min.js"></script>
+		<style>
+			.deadStock{
+				background-color:#ff0000;
+				color:#ffffff;
+			}
+			.fastMoving{
+				background-color:#00ff00;
+				color:#ffffff;
+			}
+			.moderate{
+				background-color:#0000ff;
+				color:#ffffff;
+			}
+			#stockRepTable{
+				width:450px;
+				margin:auto;
+				border:1px solid black;
+			}
+		</style>
+		<script>
+			var daySales =[
+			 {icode:101,stockInHand:25,stockSold:12},
+			 {icode:102,stockInHand:25,stockSold:25},
+			 {icode:103,stockInHand:25,stockSold:2},
+			 {icode:104,stockInHand:25,stockSold:10},
+			 {icode:105,stockInHand:25,stockSold:20},
+			 {icode:106,stockInHand:25,stockSold:23}
+			];
+			
+			var loadData = function(){
+				var dataArea = $("#stockRepTable>tbody");
+				
+				for(i=0;i<daySales.length;i++){
+					var col1 = $("<td></td>");
+					var col2 = $("<td></td>");
+					var col3 = $("<td></td>");
+					var col4 = $("<td></td>");
+					var row = $("<tr></tr>");				
+					
+					var stockBal = daySales[i].stockInHand-daySales[i].stockSold;
+					
+					col1.text(daySales[i].icode);
+					col2.text(daySales[i].stockInHand);
+					col3.text(daySales[i].stockSold);
+					col4.text(stockBal);
+					col1.appendTo(row);
+					col2.appendTo(row);
+					col3.appendTo(row);
+					col4.appendTo(row);
+					
+					if(stockBal>=((2.0/3.0)*daySales[i].stockInHand))
+						col4.addClass('deadStock');
+					else if(stockBal>=((1.0/3.0)*daySales[i].stockInHand))
+						col4.addClass('moderate');
+					else
+						col4.addClass('fastMoving');
+						
+					row.appendTo(dataArea);					
+					
+				}
+			}
+			
+			$(function(){			
+				loadData();
+			});
+		</script>
+	</head>
+	<body>
+		<h2>The Invnetory Report</h2>
+		<table id="stockRepTable">
+			<thead>
+				<tr>
+					<th>Item Code</th>
+					<th>Opening Stock</th>
+					<th>Sold</th>
+					<th>Balance</th>
+				</tr>
+			</thead>
+			<tfoot>
+			</tfoot>
+			<tbody>
+			</tbody>
+		</table>
+	</body>		
+</html>

@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <title>Laout </title>
+    <style>
+        caption {
+            font-family: 'Arial Black';
+            border-radius: 10px 10px 0 0;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 5px;
+        }
+
+        table {
+            border: 2px solid black;
+            border-radius: 0 0 10px 10px;
+            width: 40%;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            border-bottom: 1px dotted black;
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        td:nth-child(1),
+        td:nth-child(3) {
+            text-align: right;
+        }
+
+        td:nth-child(4),
+        td:nth-child(5) {
+            text-align: center;
+        }
+
+        td:nth-child(3)::before {
+            content: 'INR. ';
+        }
+
+        td:nth-child(3)::after {
+            content: ' /-';
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>SKML Gift Store Price Table</caption>
+        <tr>
+            <th>SlNo</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Fragility</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Digital Alaram Clock</td>
+            <td>1250</td>
+            <td>Fragile</td>
+            <td><a href="#">BUY</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mobile Stand</td>
+            <td>250</td>
+            <td>N/A</td>
+            <td>
+                <a href="#">BUY</a>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Glass Table Top</td>
+            <td>10250</td>
+            <td>Highly Fragile</td>
+            <td>
+                <a href="#">BUY</a>
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Digital Camera</td>
+            <td>6250</td>
+            <td>Fragile</td>
+            <td>
+                <a href="#">BUY</a>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

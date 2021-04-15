@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script>
+			$(function(){			
+				$('#hideBtn').click(function(){
+					$('#logo').hide();
+				});
+				$('#showBtn').click(function(){
+					$('#logo').show();
+				});
+				$('#toggleBtn').click(function(){
+					$('#logo').toggle();
+				});
+				
+				$('#hideBtn2').click(function(){
+					$('#logo').hide($('#timeTxt').val());
+				});
+				$('#showBtn2').click(function(){
+					$('#logo').show($('#timeTxt').val());
+				});
+				$('#toggleBtn2').click(function(){
+					$('#logo').toggle($('#timeTxt').val());
+				});	
+			});
+		</script>
+	</head>
+	<body>
+		<h2>The Apper Disapper Effects Demo</h2>
+		<hr />
+		<button id="hideBtn">Hide</button>
+		<button id="showBtn">Show</button>
+		<button id="toggleBtn">Toggle</button>
+		<hr />
+		<label>Enter time(slow/fast/in mills):</label>
+		<input type="text" id="timeTxt" />
+		<button id="hideBtn2">Hide</button>
+		<button id="showBtn2">Show</button>
+		<button id="toggleBtn2">Toggle</button>		
+		<hr />
+		<div style="padding:20px; border: 2px dashed black;">
+		<img id="logo" src="logo.png" style="width: 200px"  />
+		</div>
+	</body>		
+</html>

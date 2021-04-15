@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script>
+			$(function(){			
+			
+				$('#appendBtn').click(function(){
+					$('#list').append('<li>' + $('#content').val() +'</li>');
+					updateRemove()
+				});
+				
+				$('#prependBtn').click(function(){
+					$('#list').prepend('<li>' + $('#content').val() +'</li>');
+					updateRemove()
+				});
+				
+				$('#afterBtn').click(function(){
+					$('#list').after('<p>' + $('#content').val() +'</p>');
+					updateRemove()
+				});
+				
+				$('#beforeBtn').click(function(){
+					$('#list').before('<p>' + $('#content').val() +'</p>');
+					updateRemove()
+				});
+				
+				$('#clearBtn').click(function(){
+					$('#list').empty();
+				});
+				
+				function updateRemove(){
+					$('p,li').click(function(){
+						$(this).remove();
+					});
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<h2>The DOM Manipulation Demo</h2>
+		Enter some text: <input type="text" id="content" size="90" /> <br /><br />
+		<button id="appendBtn">Append As List Item To OL</Button><br />
+		<button id="prependBtn">Prepand As List ItemTo OL</Button><br />
+		<button id="afterBtn">Add As Para After OL</Button><br />
+		<button id="beforeBtn">Add As Para Before OL</Button><br />
+		<button id="clearBtn">Clear The OL</button><br />
+		<em><strong>Click on the para or list item to remove them</strong></em>
+		<hr />
+		<ol id="list" style="margin:20px;padding:20px;border:2px dashed black;">
+		</ol>
+		<hr />
+	</body>		
+</html>

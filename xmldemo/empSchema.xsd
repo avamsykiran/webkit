@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ 
+ <xs:element name="tax" type="xs:decimal" fixed="13.0" />
+ 
+ <xs:element name="hra">
+  <xs:simpleType>
+    <xs:restriction base="xs:integer">
+	  <xs:minInclusive value="1000" />
+	  <xs:maxInclusive value="10000" />
+	</xs:restriction>
+  </xs:simpleType>
+ </xs:element>
+ 
+ <xs:element name="ta">
+  <xs:simpleType>
+    <xs:restriction base="xs:integer">
+	  <xs:minInclusive value="500" />
+	  <xs:maxInclusive value="3000" />
+	</xs:restriction>
+  </xs:simpleType>
+ </xs:element>
+ 
+ <xs:element name="basic">
+  <xs:simpleType>
+    <xs:restriction base="xs:integer">
+	  <xs:minInclusive value="7000" />
+	</xs:restriction>
+  </xs:simpleType>
+ </xs:element>
+ 
+ <xs:element name="sal">
+  <xs:complexType>
+    <xs:sequence>
+	  <xs:element ref="basic" />
+	  <xs:element ref="ta" />
+	  <xs:element ref="hra" />
+	  <xs:element ref="tax"  minOccurs="0" />
+	</xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ 
+ <xs:element name="gender">
+  <xs:simpleType>
+   <xs:restriction base="xs:string">
+     <xs:pattern value="Feminine|Masculine"/>
+   </xs:restriction>
+  </xs:simpleType>
+ </xs:element>
+ 
+ <xs:element name="qual">
+  <xs:simpleType>
+   <xs:restriction base="xs:string">
+     <xs:enumeration value="BTech"/>
+	 <xs:enumeration value="MTech"/>
+	 <xs:enumeration value="MS"/>
+	 <xs:enumeration value="Ph.D"/>
+   </xs:restriction>
+  </xs:simpleType>
+ </xs:element>
+ 
+ <xs:element name="ename">
+  <xs:simpleType>
+   <xs:restriction base="xs:string">
+     <xs:pattern value="[A-Z][A-Za-z\s]{1,24}"/>
+   </xs:restriction>
+  </xs:simpleType>
+ </xs:element>
+ 
+ <xs:element name="employee">
+  <xs:complexType>
+   <xs:all>
+    <xs:element ref="ename" />
+	<xs:element ref="qual" />
+	<xs:element ref="gender" />
+	<xs:element ref="sal" />
+   </xs:all>
+   <xs:attribute name="empid" 
+				type="xs:integer" use="required"/>
+  </xs:complexType>
+ </xs:element>
+ 
+ <xs:element name="employees">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="employee" 
+				minOccurs="1" maxOccurs="unbounded" />	
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>

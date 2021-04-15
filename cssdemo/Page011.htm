@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Laout </title>
+    <style>
+       .row{
+           background-color: blue;           
+           padding:10px;
+       }
+       .col{
+           background-color: bisque;           
+           width:100%;
+           min-height:100px;
+           display:inline-block;
+           text-align: center;
+           margin:5px;
+       }
+
+       @media only screen and (min-width: 768px){
+        .col{
+            width:32%;
+        }
+       }
+
+       @media only print{
+        .col,.row{
+            background-color: #ffffff;
+        }
+        .row{
+            border:1px dashed black;
+        }
+        .col{
+            border:1px solid black;
+            width:32%;
+        }
+       }
+    </style>
+</head>
+
+<body>
+  <section class="row">
+      <div class="col">ABC</div>
+      <div class="col">DEF</div>
+      <div class="col">GHI</div>
+  </section>
+</body>
+
+</html>

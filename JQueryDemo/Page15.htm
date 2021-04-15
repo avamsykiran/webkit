@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script>
+			$(function(){			
+				$("#screen").hide();
+				$("#btnOpenScreen").click(function(){
+					$("#screen").fadeTo('slow',0.5);
+				});
+				$("#btnCloseScreen").click(function(){
+					$("#screen").hide();
+				});
+			});
+		</script>
+		<style>
+			body{
+				height:100%;
+			}
+			#screen{
+				top:0;
+				left:0;
+				min-width:100%;
+				min-height:100%;
+				background-color:#aaaaaa;
+				position:absolute;
+				margin:0;
+				z-index:5;
+			}
+			#screen .content{
+				margin:auto;
+				width:500px;
+			}
+			#btnCloseScreen{
+				 background-color:#000000;
+				 color:#ffffff;
+				 font-weight:bolder;
+				 margin-top: 1px;
+				 margin-right: 2px;
+				 position:absolute;
+				 top:0;
+				 right:0;
+				 border-radius:90px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>The Screen Demo</h2>
+		<button id="btnOpenScreen" type="button">
+			Show Screen
+		</button>
+		<div id="screen">
+			<div class="content">
+			<h1>You can not access the page unless you close this screen</h1>
+			</div>
+			<button id="btnCloseScreen" type="button">
+				X
+			</button>	
+		</div>
+	</body>		
+</html>

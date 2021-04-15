@@ -1,0 +1,59 @@
+
+*{
+	margin:5px;
+	padding:5px;
+}
+
+body > nav :link{
+	text-decoration:none;	
+	border-radius:10px;
+	padding:15px;
+	border: 1px solid black;
+}
+
+body > nav :hover{
+	background-color:#ff0000;
+	color:#ffffff;
+}
+
+body > nav :active{
+	background-color:#00ff00;
+	color:#cccccc;
+}
+
+#gallery {
+	border-radius:15px;
+	padding:15px;
+	background-color:#ccffcc;
+	margin-top:15px;
+}
+
+#gallery > header, #gallery article > header{
+	background-color:#dddddd;
+	margin:0px;
+}
+
+#gallery article > header{
+	border-top-left-radius:15px;	
+	border-top-right-radius:15px;	
+}
+
+#gallery article > section{
+	min-height:200px;
+	border-bottom-left-radius:15px;	
+	border-bottom-right-radius:15px;	
+	background-color:#ffffff;
+	margin:0px;
+}
+
+#gallery article {
+	padding:0px;
+	border-radius:15px;	
+	width: 250px;
+	float:left;
+}
+
+.stopFloating {
+	clear:both;
+}
+

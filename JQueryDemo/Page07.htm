@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<script src="jquery-3.1.0.min.js"></script>
+		<script>
+			$(document).ready(function(){
+						
+				$('input[type="text"]').focus(function(){
+					$(this).css('border','3px solid black');
+				});
+				
+				$('input[type="text"]').blur(function(){
+					$(this).css('border','1px solid black');
+				});
+				
+				$('#txtMessage').change(function(){
+					$('#para1').text($(this).val());
+				});
+				
+				$('#txtFont').change(function(){
+					$('#para1').css('font',$(this).val());
+				});
+				
+				$('#cmbAlign').change(function(){
+					$('#para1').css('text-align',$(this).val());
+				});
+				
+				$('#form1').submit(function(){
+					alert('Only a test submition, some valdiation code can go here!');
+					return false;
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2>Form Events Demo</h2>
+		<p id="para1" style="padding:20px;border: 1px dashed black;">
+			Some text goes here.
+		</p>
+		<form id="form1">
+			<label for="txtMessage">Message: </label>
+			<input type="text" id="txtMessage" size="50" /> <br />
+			<label for="txtFont">Font (style size family): </label>
+			<input type="text" id="txtFont" size="50" /><br />
+			<label for="cmbAlign">Text Allignment </label>
+			<select id="cmbAlign">
+				<option value="left">Left</option>
+				<option value="center">Center</option>
+				<option value="right">right</option>				
+			</select> <br />
+			<button type="submit">Submit</button>
+		</form>
+		
+	</body>		
+</html>

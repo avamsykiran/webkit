@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<employees>
+ <employee empid="145678">
+	<ename>Preeti</ename>
+	<qual>BTech</qual>
+	<sal>32000</sal>	
+ </employee>
+ <employee empid="234589">
+	<ename>Komal</ename>
+	<qual>BTech</qual>
+	<sal>28500</sal>	
+ </employee>
+ <employee empid="325689">
+	<ename>Rahul</ename>
+	<qual>MTech</qual>
+	<sal>125125</sal>	
+ </employee>
+</employees>

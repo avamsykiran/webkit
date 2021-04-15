@@ -1,0 +1,25 @@
+		  body { 
+			background-color:#ff00ff;
+		  }	
+		  h1,h2,h3,h4,h5,h6 {
+			text-align:center;
+			border-bottom: 2px solid red;
+		  }
+		  #header {
+			background-color:#cccccc;
+			border-radius:10px;
+			margin:5px;
+			padding:20px;			
+			font-size:4em;
+			font-weight:800;
+			border:0px;
+		  }
+		  p{
+			text-align:justify;
+			padding:10px;
+		  }
+		  .quote{
+			border-left:15px solid red;
+			background-color:#aaaaaa;
+			padding-left:17px;
+		  }

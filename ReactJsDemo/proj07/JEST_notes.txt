@@ -1,0 +1,77 @@
+sample test case
+=============================
+test('two plus two is four', () => {
+  expect(2 + 2).toBe(4);
+});
+
+explanation
+---------------------------
+test(textDescription,testFunction);  creates a test case
+expect(expressionToBeTested)         asserts the actual output
+toBe                                  checks for object equality through Object.is
+
+
+JEST Matchers
+========================================
+
+    Equality Matchers
+    --------------------------
+    toBe            checks for object equality through Object.is
+    toEqual         checks for object equality byiterating through each field
+    not             ege not.toBe or not.toEqual ..etc
+
+    Truthy (boolean) Matchers
+    ------------------------------
+    toBeNull        matches only null
+    toBeUndefined   matches only undefined
+    toBeDefined     is the opposite of toBeUndefined
+    toBeTruthy      matches anything that an if statement treats as true
+    toBeFalsy       matches anything that an if statement treats as false
+
+    Number Matchers
+    --------------------------------
+    toBeGreaterThan
+    toBeGreaterThanOrEqual
+    toBeLessThan
+    toBeLessThanOrEqual
+
+    String Matchers
+    -------------------------------------
+    toMatch(regExp)
+
+    eg: test('but there is a "stop" in Christoph', () => {
+            expect('Christoph').toMatch(/stop/);
+        });
+
+    Arrays or Iterable Matchers
+    --------------------------------------
+    toContain
+
+    Exception Matchers
+    --------------------------------------
+    toThrow
+
+    eg:
+        function compileAndroidCode() {
+            throw new Error('you are using the wrong JDK');
+        }
+
+        test('compiling android goes as expected', () => {
+            expect(compileAndroidCode).toThrow();
+            expect(compileAndroidCode).toThrow(Error);
+
+            // You can also use the exact error message or a regexp
+            expect(compileAndroidCode).toThrow('you are using the wrong JDK');
+            expect(compileAndroidCode).toThrow(/JDK/);
+        });
+
+For More:  https://jestjs.io/docs/en/expect
+
+TearDown and SetUp Functions
+---------------------------------------
+
+    beforeAll
+    afterAll
+    beforeEach
+    afterEach
+

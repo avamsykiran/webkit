@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>New Input Attributes</title>
+</head>
+<body>
+    <h2>Registration</h2>
+    <form action="register.aspx" id="regform" method="post">
+
+        Username : <input type="text" autocomplete="on" name="username" autofocus="autofocus" title="user name here" />
+        <input type="submit" value="Verify" formaction="verify.aspx"  formmethod="get" formtarget="_blank" />
+        <p />
+        <input type="submit" value="Register" />
+    </form>
+
+    <h3>Remarks</h3>
+    <textarea name="remarks" rows="3" cols="80" form="regform" placeholder="Type your remarks here" title="remarks here"></textarea>
+        
+</body>
+</html>

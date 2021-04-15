@@ -1,0 +1,54 @@
+<!Doctype html!>
+
+<html>
+<head>
+    <title>Local Storage</title>
+</head>
+<body>
+    <h2>Local Storage</h2>
+
+    <div id="count"></div>
+    <div id="date"></div>
+
+	<p>
+    <button onclick="increment()">Get Inforation</button>
+    <button onclick="clearStorage()">Clear Local Storage</button>
+	</p>
+
+    <script>
+        var count = document.getElementById("count");
+        var date = document.getElementById("date");
+
+        function clearStorage() {
+            localStorage.clear();
+            // clear text
+            count.innerHTML = "";
+            date.innerHTML = "";
+        }
+		
+        function increment() {
+
+            if (localStorage.button_count) {
+                var cnt = Number(localStorage.button_count) + 1;
+                localStorage.button_count = cnt;
+            }
+            else
+                // localStorage.button_count = 1;
+                localStorage.setItem("button_count", 1);
+
+            count.innerHTML = "You clicked on the button for " + localStorage.button_count + " time(s)";
+
+            if (localStorage.button_date)
+                date.innerHTML = "You last accessed this page at : " + localStorage.button_date;
+            else
+                date.innerHTML = "You are accessing page first time!";
+
+            localStorage.button_date = new Date().toString();
+
+
+        } // increment
+    </script>
+</body>
+</html>
+
+

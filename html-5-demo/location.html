@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Geo Location</title>
+</head>
+<body>
+    <div id="divInfo"></div>
+    <button onclick="getlocation()">Get Location</button>
+	<iframe style="width:100%;min-height:200px" id="locFrame">
+	</iframe>
+     <script type="text/javascript">
+         var divInfo = document.getElementById("divInfo");
+         function getlocation() {
+        
+             if (navigator.geolocation) {
+                 navigator.geolocation.getCurrentPosition(showPosition, errorFun);
+             }
+             else { divInfo.innerHTML = "Geolocation is not supported by this browser."; }
+         }
+
+         function showPosition(position) {
+             var loc = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude ;
+             divInfo.innerHTML = loc;
+			 
+			 var frm = document.getElementById("locFrame");
+			 frm.src="https://www.google.com/maps/search/?api=1&query="+position.coords.latitude+","+position.coords.longitude;
+			 
+        }
+
+         function errorFun(error) {
+
+             switch (error.code) {
+
+                 case error.PERMISSION_DENIED: alert("Sorry! Permission not granted by user!"); break;
+                 case error.POSITION_UNAVAILABLE: alert("Sorry! Position Not Known!"); break;
+                 case error.TIMEOUT: alert("Sorry! Request timed out !"); break;
+
+             }
+              
+         }
+    </script>
+</body>
+</html>

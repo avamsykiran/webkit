@@ -1,0 +1,24 @@
+body{
+	background-color:#aaffaa;
+}
+
+header{
+	background-color:#cccccc;
+	border-radius:25px;
+	padding:20px;
+}
+
+header h3{
+	text-align:right;
+}
+
+header h2{
+	text-align:center;
+	border-bottom: 1px dashed black;
+}
+
+@media print{
+	body{
+		background-color:#ffffff;
+	}
+}

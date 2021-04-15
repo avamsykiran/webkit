@@ -1,0 +1,22 @@
+[
+    {
+        "bookId": 101,
+        "title": "The Hounds Of Baskervelli",
+        "price": 256
+    },
+    {
+        "bookId": 102,
+        "title": "The Mahabaharat",
+        "price": 12256
+    },
+    {
+        "bookId": 103,
+        "title": "The Geetha",
+        "price": 9256
+    },
+    {
+        "bookId": 104,
+        "title": "Learn Angular in 7 days",
+        "price": 556
+    }
+]

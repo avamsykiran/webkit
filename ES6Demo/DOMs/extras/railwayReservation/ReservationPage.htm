@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Reservation Page</title>
+        <script src="reservationScript.js"></script>
+    </head>
+    <body>
+        <form>
+            <label>Train Number: 
+                <input type="text" id="trnNoTb" name="trnNo"/>
+            </label>
+            <label>Class:
+                <select name="clz" id="clzCb">
+                    <option value="">---SELECT---</option>
+                    <option value="AC1">AC 2 Tier</option>
+                    <option value="AC2">AC 3 Tier</option>
+                    <option value="SLP">Sleeper</option>
+                </select>
+            </label>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>SlNo</th>
+                        <th>Passanger Name</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody id="passengersArea">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            <button type="button" onClick="addPassenger()">
+                                Add Passenger
+                            </button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </body>
+</html>

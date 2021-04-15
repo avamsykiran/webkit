@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <h2>Email Selector</h2>
+    <form action="process.aspx"  oninput='email.value=name.value.concat("@",emailserver.value)'>
+        Enter your name : <input type="text" name="name" id="name"/>
+        <p />
+        Select Email Server : <input type="text" list="emailservers" name="emailserver" id="emailserver" />
+        <p />
+        Your Email Id : <output name="email" for="emailserver" />
+        <p />
+        <input type="submit" value="Submit" />
+        <datalist id="emailservers">
+            <option value="gmail.com"></option>
+            <option value="yahoo.com"></option>
+            <option value="hotmail.com"></option>
+            <option value="rediffmail.com"></option>
+        </datalist>
+    </form>
+</body>
+</html>

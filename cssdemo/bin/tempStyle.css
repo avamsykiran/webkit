@@ -1,0 +1,44 @@
+body{
+    background-color: #3434a8;
+    padding:12px;
+}
+
+h2{
+    border-bottom: 1px solid #000000;
+}
+
+p{
+    background-color: #cfcfcf;
+    padding:12px;            
+}
+
+[src]{
+    width: 300px;
+    height: 200px;;
+}
+
+[type="text"]{
+    text-align: center;
+}
+
+[type="number"]{
+    text-align: right;
+}
+
+[type="date"]{
+    text-align: left;
+}
+
+form{
+    margin-top: 50px;
+}
+
+.imp{
+    background-color: #000000;
+    color:#ffffff;
+}
+
+#f1{
+    border:1px dashed #000000;
+    padding:12px;
+}

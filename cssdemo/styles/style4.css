@@ -19,8 +19,8 @@ div{
 }
 
 #d4{
-    background-repeat: no-repeat;
     overflow: scroll;
     padding:15px;
+    background-repeat: no-repeat;
     background-attachment: scroll;
 }

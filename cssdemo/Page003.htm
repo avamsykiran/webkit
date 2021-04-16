@@ -1,33 +1,40 @@
 <html>
-    <head>
-        <title>Box Model </title>
-        <style>
-            div{
-                border:1px solid #000000;
-                width:100px;
-                height:100px;
-                position:absolute;
-            }
-            #d1{
-                background-color: #fafafa;
-            }
-            #d2{
-                background-color: #c011c0;
-                top:25px;
-                left:25px;
-                z-index: 4; 
-            }
-            #d3{
-                background-color: #111111;
-                top:50px;
-                left:50px;
-                z-index: 3;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="d1"></div>
-        <div id="d2"></div>
-        <div id="d3"></div>
-    </body>
+
+<head>
+    <title>Box Model </title>
+    <style>
+        div {
+            border: 1px solid #000000;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        #d1 {
+            background-color: #fafafa;
+            z-index: 3;
+        }
+
+        #d2 {
+            background-color: #c011c0;
+            top: 25px;
+            left: 25px;
+            z-index: 2;
+        }
+
+        #d3 {
+            background-color: #111111;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+</body>
+
 </html>

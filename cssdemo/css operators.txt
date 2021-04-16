@@ -47,7 +47,6 @@ p:nth-last-child(2)
 				Selects every <p> element that is the second child of its parent, 
 				counting from the last child
 
-
 p:nth-last-of-type(2)	
 				Selects every <p> element that is the second <p> element of its parent, 
 				counting from the last child

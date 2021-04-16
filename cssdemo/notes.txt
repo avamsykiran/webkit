@@ -85,14 +85,14 @@ CSS 3 - Intro
 CSS - unit of measure
 ------------------------------------
 
-	absolute
+	absolute		(irrespective of screen size)
 		in
 		mm
 		cm
 		pt		1 in = 72 pt
 		pc		1 in = 6  pc   1 pc = 12 pt
 	
-	relative
+	relative 	(to screen size)
 	
 		px
 		
@@ -137,9 +137,11 @@ CSS list related properties
 ----------------------------------
 
 	list-style-type			disc	circle	square	none	for ul
-							decimal	decimal-leading-zero	for ol
+							decimal							for ol
+							decimal-leading-zero	
 							lower-alpha
-							upper-alphalower-roman
+							upper-alpha
+							lower-roman
 							upper-roman
 	list-style-position		outside or inside
 	list-style-image:		url('imgs/note.png')

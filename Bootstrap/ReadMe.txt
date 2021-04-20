@@ -1,4 +1,5 @@
-Bootstrap was developed by Mark Otto and Jacob Thornton at Twitter, and released as an open source product in August 2011 on GitHub.
+Bootstrap was developed by Mark Otto and Jacob Thornton at Twitter, 
+and released as an open source product in August 2011 on GitHub.
 
 Download from : http://getbootstrap.com/
 
@@ -159,6 +160,10 @@ Special Contaienrs
 		
 		will create a closable alert container, add
 		fade and in classes for fade effects.
+
+card
+tab
+navbar
 		
 Creating a pagination bar
 ------------------------------------
